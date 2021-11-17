@@ -5,7 +5,7 @@ import { ActionsContext } from '../contexts/context';
 const Scan = () => {
     const [message, setMessage] = useState('');
     const [serialNumber, setSerialNumber] = useState('');
-    const { actions, setActions} = useContext(ActionsContext);
+    const {actions, setActions} = useContext(ActionsContext);
 
     const scan = useCallback(async() => {
         if ('NDEFReader' in window) { 

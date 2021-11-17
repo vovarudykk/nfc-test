@@ -6,9 +6,9 @@ const Write = () => {
             const ndef = new window.NDEFReader();
             const min = 1000;
             const max = 10000;
-            let someMessage = "https://github.com/vovarudykk"
-            await ndef.write({records: [{ recordType: "text", data: someMessage }]});
-            alert(`Value Saved!`);
+            let someMessage = min + Math.random() * (max - min);
+            await ndef.write({records: [{ recordType: "url", data: someMessage }]});
+            alert(`Value ${someMessage} Saved!`);
         } catch (error) {
             console.log(error);
         }
